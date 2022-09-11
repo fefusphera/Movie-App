@@ -1,0 +1,63 @@
+@import "../../style/variables.scss";
+@import "../../style/mixins.scss";
+
+.MainMovieHome {
+  // border: 2px solid green;
+  @include display();
+
+  align-items: center;
+  width: 100vw;
+  align-self: center;
+  // border: 3px solid red;
+
+  .searchMovieForm {
+    margin: 0, 30px;
+    @include display(flex, column, center, center);
+
+    .MainInputForm {
+      // border: 2px solid blue;
+      margin: 20px;
+
+      @include display(flex, column, center, center, nowrap, 10px);
+      .FormBtn {
+        border: none;
+        width: 4rem;
+        border-radius: 5px;
+        background-color: $secondary-color;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .MainMovieCard {
+    @include display(flex, row-reverse, center, center);
+    background-color: $soft-transparency;
+    border-radius: 10px;
+    // width: 600px;
+    padding: 20px;
+    // border: 2px solid green;
+    color: white;
+
+    &__info {
+      @include display(flex, column, center, center);
+      margin-left: 30px;
+      width: 500px;
+      height: 400px;
+      padding: 30px;
+      // border: 2px solid violet;
+    }
+
+    &__title {
+      margin-top: 0px;
+      color: $secondary-color;
+      font-weight: bold;
+      font-size: 50px;
+      text-shadow: 0 0 1.5px black;
+    }
+    .MainMovieCard__img {
+      border-radius: 5px;
+      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.354);
+      width: 300px;
+    }
+  }
+}

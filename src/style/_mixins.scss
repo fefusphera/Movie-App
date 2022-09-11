@@ -1,0 +1,36 @@
+@mixin box-model($margin: 0, $border, $padding: 0) {
+  margin: $margin;
+  border: $border;
+  padding: $padding;
+}
+
+@mixin element-position(
+  $position: static,
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto,
+  $z-index: 1
+) {
+  position: &$position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin display(
+  $display: flex,
+  $direction: column,
+  $justify: center,
+  $align: stretch,
+  $wrap: nowrap,
+  $gap: 0px
+) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  gap: $gap;
+}

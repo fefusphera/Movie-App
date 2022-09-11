@@ -1,0 +1,38 @@
+@import "../../style/variables";
+@import "../../style/mixins";
+
+.TopRated {
+  //   border: 2px solid red;
+  font-size: 0.9rem;
+  align-items: center;
+  width: 100vw;
+  align-self: center;
+
+  .TopRatedCard {
+    // border: 2px solid green;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+
+    .TopRated__Info {
+      padding: 10px;
+      //   border: 2px solid yellow;
+    }
+    .TopRated__Title {
+      @include display();
+      margin: 0px;
+      color: $secondary-color;
+      font-weight: bold;
+      text-shadow: 0 0 1.5px black;
+      font-size: 0.9rem;
+      min-height: 40px;
+    }
+    .TopRated__Img {
+      border-radius: 5px;
+      width: 180px;
+      height: 250px;
+      object-fit: fill;
+      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.354);
+    }
+  }
+}

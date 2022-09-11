@@ -1,0 +1,57 @@
+@import "./style/mixins";
+@import "./style/variables";
+
+.App {
+  text-align: center;
+  @include display();
+
+  .PopularList__Title {
+    color: $secondary-color;
+  }
+  .PopularList {
+    // border: 2px solid red;
+    @include display(flex, row, center, center, nowrap, 20px);
+    justify-content: flex-start;
+    margin: 20px;
+
+    // width: 100vw;
+    height: 300px;
+    overflow-x: scroll;
+    overflow-y: clip;
+    flex: 0 0 auto;
+    scroll-behavior: smooth;
+    scrollbar-color: transparent;
+  }
+
+  .TopRatedList__Title {
+    color: $secondary-color;
+  }
+
+  .TopRatedList {
+    // border: 2px solid blue;
+    @include display(flex, row, center, center, nowrap, 20px);
+    justify-content: flex-start;
+    margin: 20px;
+
+    height: 300px;
+    overflow-x: scroll;
+    overflow-y: clip;
+    flex: 0 0 auto;
+  }
+
+  .UpcomingList__Title {
+    color: $secondary-color;
+  }
+
+  .UpcomingList {
+    @include display(flex, row, center, center, nowrap, 20px);
+    justify-content: flex-start;
+    margin: 20px;
+
+    // width: 100vw;
+    height: 300px;
+    overflow-x: scroll;
+    overflow-y: clip;
+    flex: 0 0 auto;
+  }
+}

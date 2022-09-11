@@ -1,0 +1,36 @@
+@import "../../style/variables";
+@import "../../style/mixins";
+
+.Popular {
+  font-size: 0.9rem;
+  align-items: center;
+  width: 100vw;
+  align-self: center;
+
+  .MainPopularCard {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+
+    .MainPopularInfo {
+      padding: 10px;
+
+      &__title {
+        @include display();
+        margin: 0px;
+        color: $secondary-color;
+        font-weight: bold;
+        text-shadow: 0 0 1.5px black;
+        font-size: 0.9rem;
+        min-height: 40px;
+      }
+      .MainPopularImg {
+        border-radius: 5px;
+        width: 180px;
+        height: 250px;
+        object-fit: fill;
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.354);
+      }
+    }
+  }
+}

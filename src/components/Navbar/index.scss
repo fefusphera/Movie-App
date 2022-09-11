@@ -1,0 +1,23 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
+.MainNavbar {
+  color: $secondary-color;
+  background-color: $soft-transparency;
+  .AppName {
+    font-size: 30px;
+  }
+  &__ul {
+    @include display(flex, row, center);
+    justify-content: space-around;
+    list-style: none;
+  }
+  &__li {
+    text-decoration: none;
+    color: $secondary-color;
+    & a:visited {
+      text-decoration: none;
+      color: $secondary-color;
+    }
+  }
+}
